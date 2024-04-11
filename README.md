@@ -18,3 +18,4 @@ while animal_list:
     else:
         print(list_o_matic(animal_input, animal_list))
 print("Goodbye!")
+>update to READ.ME
