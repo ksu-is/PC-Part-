@@ -1,0 +1,7 @@
+def check_compatibility(cpu, gpu):
+    # Define compatibility rules here
+    if cpu.brand == "Apple" and "M1" not in cpu.model:
+        return Not Compatible
+    elif cpu.brand == "Dell" and "Ryzen 2700" not in cpu.model:
+        return Not compatible
+
