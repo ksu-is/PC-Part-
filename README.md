@@ -6,7 +6,7 @@ lass ComputerPart:
 
 def add_cpu():
     brand = input("Enter CPU brand: Intel, Dell, Apple ")
-    model = input("Enter CPU model: ")
+    model = input("Enter CPU model: "Intel I3, Intel I7, Ryzen 2700, Apple M1")
     price = float(input("Enter CPU price: "))
     cpu = ComputerPart(brand, model, price)
     return cpu
@@ -30,9 +30,10 @@ def check_compatibility(cpu, gpu):
     if cpu.brand == "Apple" and "M1" not in cpu.model:
         return Not Compatible
     elif cpu.brand == "Dell" and "Ryzen 2700" not in cpu.model:
-        return Not compatible
+        return Not Compatible
     else:
         return True
 
 >update to READ.ME
 >second update
+>update 3
