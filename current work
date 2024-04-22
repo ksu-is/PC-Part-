@@ -5,3 +5,11 @@ def check_compatibility(cpu, gpu):
     elif cpu.brand == "Dell" and "Ryzen 2700" not in cpu.model:
         return Not compatible
 
+#part two 
+class Memory(ComputerPart):
+    def __init__(self, brand, model, price, capacity):
+        super().__init__(brand, model, price)
+
+class Storage(ComputerPart):
+    def __init__(self, brand, model, price, capacity):
+        super().__init__(brand, model, price)
