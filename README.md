@@ -1,15 +1,19 @@
-lass ComputerPart:
+class ComputerPart:
     def __init__(self, brand, model, price):
         self.brand = brand
         self.model = model
         self.price = price
 
-def add_cpu():
-    brand = input("Enter CPU brand: Intel, Dell, Apple ")
+def Add_cpu():
+    brand = input("Enter CPU brand: Intel, Dell, HP, Apple ")
     model = input("Enter CPU model: "Intel I3, Intel I7, Ryzen 2700, Apple M1")
-    price = float(input("Enter CPU price: "))
+    Prices = {"Intel I3":200, "Intel I7": 250, "Ryzen 2700": 300,"Apple M1:50}
+    price = float(input("Enter CPU price:"200, 250, 300, 40 "))
     cpu = ComputerPart(brand, model, price)
     return cpu
+    
+def Choose_case
+    
 
 def calculate_total_price(parts):
     total_price = sum(part.price for part in parts)
