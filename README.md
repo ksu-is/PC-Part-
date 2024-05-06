@@ -5,15 +5,23 @@ class ComputerPart:
         self.price = price
 
 def Add_cpu():
-    brand = input("Enter CPU brand: Intel, Dell, HP, Apple ")
-    model = input("Enter CPU model: "Intel I3, Intel I7, Ryzen 2700, Apple M1")
-    Prices = {"Intel I3":200, "Intel I7": 250, "Ryzen 2700": 300,"Apple M1:50}
-    price = float(input("Enter CPU price:"200, 250, 300, 40 "))
+     brand = input("Enter CPU brand (Intel, Dell, Apple, HP): ")
+    model = input("Enter CPU model (Intel I3, Intel I7, Ryzen 2700, Apple M1): ")
+    prices = {"Intel I3": 200, "Intel I7": 250, "Ryzen 2700": 300, "Apple M1": 40}
+    price = prices.get(model, 0) 
     cpu = ComputerPart(brand, model, price)
     return cpu
     
-def Choose_case
-    
+def add_case(cpu):
+    if cpu.brand == "Apple":
+        case_model = "Apple Case"
+        case_price = 250
+    else:
+        case_model = input("Enter case model (Small, Medium, Large): ")
+        case_prices = {"Small": 50, "Medium": 75, "Large": 100}
+        case_price = case_prices.get(case_model, 0)  
+    case = ComputerPart("Apple", case_model, case_price)
+    return case
 
 def calculate_total_price(parts):
     total_price = sum(part.price for part in parts)
@@ -27,6 +35,12 @@ def display_configuration(parts, total_price):
 
 def main():
     parts = []
+    cpu = add_cpu()
+    parts.append(cpu)
+    case = add_case(cpu)
+    parts.append(case)
+    total_price = calculate_total_price(parts)
+    display_configuration(parts, total_price)
     
 # continue work on compatibility
 def check_compatibility(cpu, gpu):
@@ -41,3 +55,4 @@ def check_compatibility(cpu, gpu):
 >update to READ.ME
 >second update
 >update 3
+>update
